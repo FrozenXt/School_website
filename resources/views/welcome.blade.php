@@ -195,7 +195,7 @@
       <div class="d-flex ms-auto">
         <a href="{{ route('apply.form') }}" class="btn btn-success me-2">Apply Now</a>
         <a href="{{ route('admin.login') }}" class="btn btn-outline-secondary me-2">Admin</a>
-        <a href="#" class="btn btn-primary">Login</a>
+        <a href="{{ route('staff.login') }}" class="btn btn-primary">Login</a>
       </div>
     </div>
   </nav>

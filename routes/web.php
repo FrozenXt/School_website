@@ -13,12 +13,8 @@ Route::get('/admin/logout', [AdminController::class, 'logout'])->name('admin.log
 Route::delete('/admin/delete/{id}', [AdminController::class, 'delete'])->name('admin.delete');
 
 
-
-
-
 Route::get('/apply', [ApplicationController::class, 'showForm'])->name('apply.form');
 Route::post('/apply', [ApplicationController::class, 'submitForm'])->name('apply.submit');
-
 
 
 Route::get('/', function () {
@@ -61,8 +57,11 @@ Route::get('/eca', function()
 
 
 
+Route::get('/staff/login', [StaffController::class, 'showLogin'])->name('staff.login');
+Route::post('/staff/login', [StaffController::class, 'login'])->name('staff.login.submit');
+Route::get('/staff/dashboard', [StaffController::class, 'dashboard'])->name('staff.dashboard');
+Route::get('/staff/logout', [StaffController::class, 'logout'])->name('staff.logout');
 
- 
 
 Route::get('/admin/logout', [AdminController::class, 'logout'])->name('admin.logout');
 
