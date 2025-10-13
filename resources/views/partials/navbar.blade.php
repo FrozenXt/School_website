@@ -74,10 +74,10 @@
             ECA (Extra Co-Curricular Activities)
           </a>
           <ul class="dropdown-menu" aria-labelledby="ecaMenu">
-            <li><a class="dropdown-item" href="#">Taekwondo</a></li>
-            <li><a class="dropdown-item" href="#">Sports</a></li>
-            <li><a class="dropdown-item" href="#">Dance</a></li>
-            <li><a class="dropdown-item" href="#">Music</a></li>
+            <li><a class="dropdown-item" href="{{ route('eca.taekwondo') }}">Taekwondo</a></li>
+            <li><a class="dropdown-item" href="{{ route('eca.sports') }}">Sports</a></li>
+            <li><a class="dropdown-item" href="{{ route ('eca.dance') }}">Dance</a></li>
+            <li><a class="dropdown-item" href="{{ route ('eca.music') }}">Music</a></li>
           </ul>
         </li>
       </ul>

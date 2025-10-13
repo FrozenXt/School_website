@@ -55,12 +55,28 @@ Route::get('/eca', function()
     return view('eca');
 })->name('eca');
 
+Route::get('/eca/taekwondo', function()
+{
+    return view('eca.taekwondo');
+})->name('eca.taekwondo');
+
+Route::get('/eca/sports', function()
+{
+    return view('eca.sports');
+})->name('eca.sports');
+
+Route::get('/eca/dance', function()
+{
+    return view('eca.dance');
+})->name('eca.dance');
+
+Route::get('/eca/music', function()
+{
+    return view('eca.music');
+})->name('eca.music');
 
 
-Route::get('/staff/login', [StaffController::class, 'showLogin'])->name('staff.login');
-Route::post('/staff/login', [StaffController::class, 'login'])->name('staff.login.submit');
-Route::get('/staff/dashboard', [StaffController::class, 'dashboard'])->name('staff.dashboard');
-Route::get('/staff/logout', [StaffController::class, 'logout'])->name('staff.logout');
+
 
 
 Route::get('/admin/logout', [AdminController::class, 'logout'])->name('admin.logout');

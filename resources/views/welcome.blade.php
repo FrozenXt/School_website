@@ -195,7 +195,7 @@
       <div class="d-flex ms-auto">
         <a href="{{ route('apply.form') }}" class="btn btn-success me-2">Apply Now</a>
         <a href="{{ route('admin.login') }}" class="btn btn-outline-secondary me-2">Admin</a>
-        <a href="{{ route('staff.login') }}" class="btn btn-primary">Login</a>
+        <a href="#" class="btn btn-primary">Login</a>
       </div>
     </div>
   </nav>
@@ -221,10 +221,10 @@
         <li class="dropdown">
           <a class="dropdown-toggle" href="#" id="ecaMenu" data-bs-toggle="dropdown">ECA (Activities)</a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Taekwondo</a></li>
-            <li><a class="dropdown-item" href="#">Sports</a></li>
-            <li><a class="dropdown-item" href="#">Dance</a></li>
-            <li><a class="dropdown-item" href="#">Music</a></li>
+            <li><a class="dropdown-item" href="{{ route('eca.taekwondo')}}">Taekwondo</a></li>
+            <li><a class="dropdown-item" href="{{ route('eca.sports') }}">Sports</a></li>
+            <li><a class="dropdown-item" href="{{ route('eca.dance') }}">Dance</a></li>
+            <li><a class="dropdown-item" href="{{ route('eca.music') }}">Music</a></li>
           </ul>
         </li>
       </ul>
