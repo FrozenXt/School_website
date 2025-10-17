@@ -194,7 +194,7 @@
     <h2 class="section-title">About Our Dance Club</h2>
     <div class="row align-items-center g-4">
       <div class="col-md-6">
-        <img src="{{ asset('assets/eca/dance2.jpg') }}" alt="Dance Performance">
+        <img src="{{ asset('assets/winnerdance.jpg') }}" alt="Dance Performance">
       </div>
       <div class="col-md-6">
         <p>
@@ -215,21 +215,21 @@
     <div class="row g-4 justify-content-center">
       <div class="col-md-4">
         <div class="event-card">
-          <img src="{{ asset('assets/eca/dance-event1.jpg') }}" alt="Annual Dance Fest">
+          <img src="{{ asset('assets/dance.jpg') }}" alt="Annual Dance Fest">
           <h5>Annual Dance Fest</h5>
           <p>Showcasing talent through diverse performances and creative storytelling.</p>
         </div>
       </div>
       <div class="col-md-4">
         <div class="event-card">
-          <img src="{{ asset('assets/eca/dance-event2.jpg') }}" alt="Cultural Program">
+          <img src="{{ asset('assets/dance1.jpg') }}" alt="Cultural Program">
           <h5>Cultural Program</h5>
           <p>Bringing cultural heritage alive through expressive traditional dances.</p>
         </div>
       </div>
       <div class="col-md-4">
         <div class="event-card">
-          <img src="{{ asset('assets/eca/dance-event3.jpg') }}" alt="Inter-School Dance Battle">
+          <img src="{{ asset('assets/dance3.jpg') }}" alt="Inter-School Dance Battle">
           <h5>Inter-School Dance Battle</h5>
           <p>Where passion meets rhythm — the ultimate stage for young performers.</p>
         </div>
@@ -247,12 +247,12 @@
   <section class="container my-5">
     <h2 class="section-title">Dance Gallery</h2>
     <div class="row g-3 dance-gallery">
-      <div class="col-md-4 col-sm-6"><img src="{{ asset('assets/eca/d1.jpg') }}" alt=""></div>
-      <div class="col-md-4 col-sm-6"><img src="{{ asset('assets/eca/d2.jpg') }}" alt=""></div>
-      <div class="col-md-4 col-sm-6"><img src="{{ asset('assets/eca/d3.jpg') }}" alt=""></div>
-      <div class="col-md-4 col-sm-6"><img src="{{ asset('assets/eca/d4.jpg') }}" alt=""></div>
-      <div class="col-md-4 col-sm-6"><img src="{{ asset('assets/eca/d5.jpg') }}" alt=""></div>
-      <div class="col-md-4 col-sm-6"><img src="{{ asset('assets/eca/d6.jpg') }}" alt=""></div>
+      <div class="col-md-4 col-sm-6"><img src="{{ asset('assets/dance.jpg') }}" alt=""></div>
+      <div class="col-md-4 col-sm-6"><img src="{{ asset('assets/dance1.jpg') }}" alt=""></div>
+      <div class="col-md-4 col-sm-6"><img src="{{ asset('assets/dance2.jpg') }}" alt=""></div>
+      <div class="col-md-4 col-sm-6"><img src="{{ asset('assets/dance3.jpg') }}" alt=""></div>
+      <div class="col-md-4 col-sm-6"><img src="{{ asset('assets/kidsdance.jpg') }}" alt=""></div>
+      <div class="col-md-4 col-sm-6"><img src="{{ asset('assets/winnerdance.jpg') }}" alt=""></div>
     </div>
   </section>
 

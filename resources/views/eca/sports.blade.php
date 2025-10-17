@@ -194,7 +194,7 @@
     <h2 class="section-title">About Our Sports Club</h2>
     <div class="row align-items-center g-4">
       <div class="col-md-6">
-        <img src="{{ asset('assets/eca/sports2.jpg') }}" alt="Sports Activities">
+        <img src="{{ asset('assets/finalsports.jpg') }}" alt="Sports Activities">
       </div>
       <div class="col-md-6">
         <p>
@@ -216,21 +216,21 @@
     <div class="row g-4 justify-content-center">
       <div class="col-md-4">
         <div class="event-card">
-          <img src="{{ asset('assets/eca/football.jpg') }}" alt="Football">
+          <img src="{{ asset('assets/boys.jpg') }}" alt="Football">
           <h5>Football Tournaments</h5>
           <p>Annual inter-school matches showcasing skill, teamwork, and determination.</p>
         </div>
       </div>
       <div class="col-md-4">
         <div class="event-card">
-          <img src="{{ asset('assets/eca/basketball.jpg') }}" alt="Basketball">
+          <img src="{{ asset('assets/basketball.jpg') }}" alt="Basketball">
           <h5>Basketball League</h5>
           <p>Fast-paced action that fosters unity and leadership among players.</p>
         </div>
       </div>
       <div class="col-md-4">
         <div class="event-card">
-          <img src="{{ asset('assets/eca/athletics.jpg') }}" alt="Athletics">
+          <img src="{{ asset('assets/basketball1.jpg') }}" alt="Athletics">
           <h5>Track & Field</h5>
           <p>Developing stamina, focus, and persistence through athletic events.</p>
         </div>
@@ -248,12 +248,12 @@
   <section class="container my-5">
     <h2 class="section-title">Sports Gallery</h2>
     <div class="row g-3 sports-gallery">
-      <div class="col-md-4 col-sm-6"><img src="{{ asset('assets/eca/s1.jpg') }}" alt=""></div>
-      <div class="col-md-4 col-sm-6"><img src="{{ asset('assets/eca/s2.jpg') }}" alt=""></div>
-      <div class="col-md-4 col-sm-6"><img src="{{ asset('assets/eca/s3.jpg') }}" alt=""></div>
-      <div class="col-md-4 col-sm-6"><img src="{{ asset('assets/eca/s4.jpg') }}" alt=""></div>
-      <div class="col-md-4 col-sm-6"><img src="{{ asset('assets/eca/s5.jpg') }}" alt=""></div>
-      <div class="col-md-4 col-sm-6"><img src="{{ asset('assets/eca/s6.jpg') }}" alt=""></div>
+      <div class="col-md-4 col-sm-6"><img src="{{ asset('assets/sports.jpg') }}" alt=""></div>
+      <div class="col-md-4 col-sm-6"><img src="{{ asset('assets/sports1.jpg') }}" alt=""></div>
+      <div class="col-md-4 col-sm-6"><img src="{{ asset('assets/sports2.jpg') }}" alt=""></div>
+      <div class="col-md-4 col-sm-6"><img src="{{ asset('assets/swimming.jpg') }}" alt=""></div>
+      <div class="col-md-4 col-sm-6"><img src="{{ asset('assets/swimming1.jpg') }}" alt=""></div>
+      <div class="col-md-4 col-sm-6"><img src="{{ asset('assets/myboys.jpg') }}" alt=""></div>
     </div>
   </section>
 

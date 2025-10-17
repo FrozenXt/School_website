@@ -15,11 +15,12 @@
       font-family: 'Poppins', sans-serif;
       background-color: #f8fff9;
       color: #333;
+      scroll-behavior: smooth;
     }
 
     /* Hero Section */
     .hero-services {
-      height: 70vh;
+      height: 80vh;
       background-size: cover;
       background-position: center;
       position: relative;
@@ -27,14 +28,14 @@
       align-items: center;
       justify-content: center;
       color: white;
+      overflow: hidden;
       transition: background-image 1s ease-in-out;
     }
 
-    .hero-services::before {
-      content: "";
+    .hero-overlay {
       position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(0, 64, 32, 0.55);
+      inset: 0;
+      background: rgba(0, 60, 30, 0.55);
       backdrop-filter: blur(2px);
       z-index: 1;
     }
@@ -48,16 +49,17 @@
 
     .hero-content h1 {
       font-weight: 700;
-      font-size: 3rem;
+      font-size: 3.5rem;
       text-transform: uppercase;
+      letter-spacing: 2px;
     }
 
     .hero-content p {
       font-size: 1.2rem;
       opacity: 0.9;
+      margin-top: 10px;
     }
 
-    /* Navigation Arrows */
     .hero-arrow {
       position: absolute;
       top: 50%;
@@ -65,73 +67,102 @@
       background: rgba(255, 255, 255, 0.2);
       border: none;
       color: white;
-      font-size: 30px;
+      font-size: 32px;
       border-radius: 50%;
-      width: 50px;
-      height: 50px;
+      width: 55px;
+      height: 55px;
       cursor: pointer;
       z-index: 3;
-      transition: all 0.3s;
+      transition: all 0.3s ease;
     }
 
     .hero-arrow:hover {
       background: rgba(255, 255, 255, 0.5);
       color: #0a3622;
+      transform: translateY(-50%) scale(1.1);
     }
 
-    .hero-arrow.left { left: 20px; }
-    .hero-arrow.right { right: 20px; }
+    .hero-arrow.left { left: 25px; }
+    .hero-arrow.right { right: 25px; }
 
-    /* Service Section */
+    /* Section Title */
     .section-title {
       text-align: center;
       font-weight: 700;
       color: #198754;
-      margin-bottom: 50px;
+      margin-bottom: 60px;
       position: relative;
+      text-transform: uppercase;
+      letter-spacing: 1px;
     }
 
     .section-title::after {
       content: "";
       display: block;
-      width: 80px;
+      width: 90px;
       height: 4px;
       background: #198754;
       margin: 15px auto 0;
       border-radius: 3px;
     }
 
+    /* Service Boxes */
     .service-box {
       background: white;
-      border-radius: 15px;
-      padding: 35px 25px;
+      border-radius: 18px;
+      padding: 40px 25px;
       text-align: center;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-      transition: all 0.3s ease;
+      box-shadow: 0 6px 25px rgba(0,0,0,0.08);
+      transition: all 0.35s ease;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
     }
 
     .service-box:hover {
       transform: translateY(-8px);
-      box-shadow: 0 10px 25px rgba(25,135,84,0.25);
+      box-shadow: 0 12px 35px rgba(25,135,84,0.25);
       border: 1px solid #198754;
     }
 
     .service-icon {
-      font-size: 45px;
+      font-size: 50px;
       color: #198754;
-      margin-bottom: 20px;
+      margin-bottom: 15px;
       transition: all 0.3s ease;
     }
 
     .service-box:hover .service-icon {
       color: #0a3622;
-      transform: scale(1.2);
+      transform: scale(1.1);
     }
 
     .service-box h4 {
       font-weight: 600;
       color: #0a3622;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
+    }
+
+    .service-box p {
+      color: #555;
+      font-size: 0.95rem;
+      margin: 0;
+    }
+
+    .service-details {
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition: all 0.4s ease;
+      margin-top: 10px;
+      color: #444;
+      font-size: 0.9rem;
+    }
+
+    .service-box.active .service-details {
+      max-height: 300px;
+      opacity: 1;
+      padding-top: 10px;
     }
 
     /* Footer */
@@ -139,8 +170,8 @@
       background: #198754;
       color: white;
       text-align: center;
-      padding: 25px 10px;
-      margin-top: 60px;
+      padding: 30px 10px;
+      margin-top: 70px;
     }
 
     footer p {
@@ -149,7 +180,6 @@
       opacity: 0.9;
     }
 
-    /* Animations */
     @keyframes fadeInUp {
       from { transform: translateY(30px); opacity: 0; }
       to { transform: translateY(0); opacity: 1; }
@@ -163,10 +193,11 @@
 
   <!-- Hero Section -->
   <section class="hero-services" id="heroServices">
+    <div class="hero-overlay"></div>
     <button class="hero-arrow left" id="prevBtn">&#10094;</button>
     <div class="hero-content">
       <h1>Our Services</h1>
-      <p>Building a brighter future through learning and leadership</p>
+      <p>Empowering students through quality education and modern learning</p>
     </div>
     <button class="hero-arrow right" id="nextBtn">&#10095;</button>
   </section>
@@ -179,42 +210,60 @@
         <div class="service-box">
           <div class="service-icon"><i class="bi bi-book-half"></i></div>
           <h4>Academic Excellence</h4>
-          <p>Comprehensive curriculum focused on knowledge, discipline, and creativity for overall growth.</p>
+          <p>Focused on growth and discipline.</p>
+          <div class="service-details">
+            <p>Our academic programs blend traditional learning with innovative techniques, fostering critical thinking, creativity, and lifelong learning habits. Each student is guided to achieve personal and academic success.</p>
+          </div>
         </div>
       </div>
       <div class="col-md-4">
         <div class="service-box">
           <div class="service-icon"><i class="bi bi-laptop"></i></div>
           <h4>Digital Learning</h4>
-          <p>Equipped with modern computer labs and smart classrooms promoting digital education.</p>
+          <p>Smart, modern, and tech-enabled.</p>
+          <div class="service-details">
+            <p>Our smart classrooms and computer labs integrate technology into everyday lessons, preparing students for the digital world and enhancing engagement through interactive education tools.</p>
+          </div>
         </div>
       </div>
       <div class="col-md-4">
         <div class="service-box">
           <div class="service-icon"><i class="bi bi-heart-pulse"></i></div>
           <h4>Counseling & Care</h4>
-          <p>Guidance and mentoring programs that nurture confidence, compassion, and self-belief.</p>
+          <p>Supporting emotional and mental growth.</p>
+          <div class="service-details">
+            <p>Our team of counselors ensures that every child feels heard, valued, and supported—mentally, socially, and academically—creating a nurturing space to grow with confidence.</p>
+          </div>
         </div>
       </div>
       <div class="col-md-4">
         <div class="service-box">
           <div class="service-icon"><i class="bi bi-bus-front"></i></div>
           <h4>Transportation</h4>
-          <p>Safe and reliable bus service ensuring timely and comfortable travel for all students.</p>
+          <p>Safe, punctual, and comfortable.</p>
+          <div class="service-details">
+            <p>Our fleet of school buses is equipped with safety features and trained staff, ensuring your child’s journey to and from school is secure and hassle-free.</p>
+          </div>
         </div>
       </div>
       <div class="col-md-4">
         <div class="service-box">
           <div class="service-icon"><i class="bi bi-building"></i></div>
           <h4>Hostel & Cafeteria</h4>
-          <p>Hygienic meals and secure accommodation to make school a second home for our students.</p>
+          <p>Healthy food and homely environment.</p>
+          <div class="service-details">
+            <p>Our hostel provides a safe and supportive residential environment, complemented by a hygienic cafeteria that serves nutritious meals designed to promote well-being.</p>
+          </div>
         </div>
       </div>
       <div class="col-md-4">
         <div class="service-box">
           <div class="service-icon"><i class="bi bi-trophy"></i></div>
           <h4>Co-curricular Activities</h4>
-          <p>Sports, art, and leadership events to encourage creativity and teamwork among learners.</p>
+          <p>Building confidence and creativity.</p>
+          <div class="service-details">
+            <p>We offer sports, arts, and leadership activities that help students discover their strengths, build character, and learn teamwork and discipline beyond classrooms.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -231,9 +280,10 @@
   <script>
     const hero = document.getElementById('heroServices');
     const images = [
-      'assets/digital.jpg',
-      'assets/boys.jpg',
-      'assets/parents.jpg'
+      'assets/building.jpg',
+      'assets/classroom.jpg',
+      'assets/debate.jpg',
+      'assets/kinderworld.jpg'
     ];
     let index = 0;
 
@@ -253,10 +303,15 @@
 
     document.getElementById('nextBtn').addEventListener('click', nextImage);
     document.getElementById('prevBtn').addEventListener('click', prevImage);
-
-    // Auto-slide every 5 seconds
     changeBackground();
-    setInterval(nextImage, 5000);
+    setInterval(nextImage, 6000);
+
+    // Expand/Collapse on Click
+    document.querySelectorAll('.service-box').forEach(box => {
+      box.addEventListener('click', () => {
+        box.classList.toggle('active');
+      });
+    });
   </script>
 </body>
 </html>

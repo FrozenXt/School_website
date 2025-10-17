@@ -184,6 +184,45 @@
       font-weight: 700;
     }
 
+    /* Social Activities Section */
+    .social-activities {
+      background: #f1fdf4;
+      padding: 70px 0;
+    }
+
+    .social-card {
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 5px 25px rgba(25, 135, 84, 0.1);
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .social-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(25, 135, 84, 0.25);
+    }
+
+    .social-card img {
+      width: 100%;
+      height: 230px;
+      object-fit: cover;
+    }
+
+    .social-card .card-body {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .social-card h5 {
+      color: #198754;
+      font-weight: 700;
+    }
+
+    .social-card p {
+      color: #555;
+    }
+
     /* Gallery */
     .eca-gallery img {
       border-radius: 12px;
@@ -268,6 +307,73 @@
     <p>At Ambassador Academy, we nurture creativity, leadership, and confidence through dynamic activities.</p>
   </section>
 
+  <!-- Social Activities -->
+  <section class="social-activities">
+    <div class="container">
+      <h2 class="section-title">Our Social Initiatives</h2>
+      <div class="row g-4 justify-content-center">
+        <div class="col-md-4">
+          <div class="social-card">
+            <img src="assets/dental.jpg" alt="Free Dental Camp">
+            <div class="card-body">
+              <h5><i class="bi bi-heart-pulse"></i> Free Dental Camp</h5>
+              <p>Promoting health awareness through dental checkups for students and community members.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="social-card">
+            <img src="assets/blood1.jpg" alt="Blood Donation Drive">
+            <div class="card-body">
+              <h5><i class="bi bi-droplet-half"></i> Blood Donation Drive</h5>
+              <p>Encouraging humanity and social responsibility among students through life-saving initiatives.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="social-card">
+            <img src="assets/social.jpg" alt="Community Cleaning Campaign">
+            <div class="card-body">
+              <h5><i class="bi bi-recycle"></i> Cleaning Campaign</h5>
+              <p>Fostering respect for the environment with hands-on community cleanliness programs.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="social-card">
+            <img src="assets/festival.jpg" alt="Festival and Traditions">
+            <div class="card-body">
+              <h5><i class="bi bi-balloon"></i> Festival Celebration</h5>
+              <p>Celebrating and wishing everyone a joyful and prosperous festival filled with peace, happiness, and togetherness</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="social-card">
+            <img src="assets/parentsmeeting.jpg" alt="Festival and Traditions">
+            <div class="card-body">
+              <h5><i class="bi bi-balloon"></i> Parent- Teacher Meeting</h5>
+              <p>A Parent-Teacher Meeting is held to discuss student's progress and strengthen cooperation between home and school.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section class="container my-5">
+    <h2 class="section-title">ECA Gallery</h2>
+    <div class="row g-3 eca-gallery">
+      <div class="col-md-4 col-sm-6"><img src="assets/sing.jpg" alt=""></div>
+      <div class="col-md-4 col-sm-6"><img src="assets/kids2.jpg" alt=""></div>
+      <div class="col-md-4 col-sm-6"><img src="assets/class1.jpg" alt=""></div>
+      <div class="col-md-4 col-sm-6"><img src="assets/social2.jpg" alt=""></div>
+      <div class="col-md-4 col-sm-6"><img src="assets/ourpicnic.jpg" alt=""></div>
+      <div class="col-md-4 col-sm-6"><img src="assets/sathwik.jpg" alt=""></div>
+    </div>
+  </section>
+
   <!-- Counters -->
   <section class="eca-counter">
     <div class="container">
@@ -301,19 +407,6 @@
           </div>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- Gallery -->
-  <section class="container my-5">
-    <h2 class="section-title">ECA Gallery</h2>
-    <div class="row g-3 eca-gallery">
-      <div class="col-md-4 col-sm-6"><img src="assets/sing.jpg" alt=""></div>
-      <div class="col-md-4 col-sm-6"><img src="assets/kids2.jpg" alt=""></div>
-      <div class="col-md-4 col-sm-6"><img src="assets/class1.jpg" alt=""></div>
-      <div class="col-md-4 col-sm-6"><img src="assets/music3.jpg" alt=""></div>
-      <div class="col-md-4 col-sm-6"><img src="assets/ourpicnic.jpg" alt=""></div>
-      <div class="col-md-4 col-sm-6"><img src="assets/sathwik.jpg" alt=""></div>
     </div>
   </section>
 

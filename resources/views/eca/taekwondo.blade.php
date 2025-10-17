@@ -194,7 +194,7 @@
     <h2 class="section-title">About Our Taekwondo Program</h2>
     <div class="row align-items-center g-4">
       <div class="col-md-6">
-        <img src="{{ asset('assets/eca/taekwondo2.jpg') }}" alt="Taekwondo Training">
+        <img src="{{ asset('assets/taekwondo6.jpg') }}" alt="Taekwondo Training">
       </div>
       <div class="col-md-6">
         <p>
@@ -216,18 +216,12 @@
     <div class="row g-4 justify-content-center">
       <div class="col-md-4">
         <div class="instructor-card">
-          <img src="{{ asset('assets/eca/instructor1.jpg') }}" alt="Instructor 1">
-          <h5>Master S. Ramesh</h5>
+          <img src="{{ asset('assets/coach.jpg') }}" alt="Instructor 1">
+          <h5>Guru Sonamnorbu Bomjan</h5>
           <p>Black Belt (5th Dan) | National Coach</p>
         </div>
       </div>
-      <div class="col-md-4">
-        <div class="instructor-card">
-          <img src="{{ asset('assets/eca/instructor2.jpg') }}" alt="Instructor 2">
-          <h5>Ms. Anjali Thapa</h5>
-          <p>2nd Dan | Youth Trainer & Mentor</p>
-        </div>
-      </div>
+      
     </div>
   </section>
 
@@ -241,12 +235,12 @@
   <section class="container my-5">
     <h2 class="section-title">Taekwondo Moments</h2>
     <div class="row g-3 tkd-gallery">
-      <div class="col-md-4 col-sm-6"><img src="{{ asset('assets/eca/tkd1.jpg') }}" alt=""></div>
-      <div class="col-md-4 col-sm-6"><img src="{{ asset('assets/eca/tkd2.jpg') }}" alt=""></div>
-      <div class="col-md-4 col-sm-6"><img src="{{ asset('assets/eca/tkd3.jpg') }}" alt=""></div>
-      <div class="col-md-4 col-sm-6"><img src="{{ asset('assets/eca/tkd4.jpg') }}" alt=""></div>
-      <div class="col-md-4 col-sm-6"><img src="{{ asset('assets/eca/tkd5.jpg') }}" alt=""></div>
-      <div class="col-md-4 col-sm-6"><img src="{{ asset('assets/eca/tkd6.jpg') }}" alt=""></div>
+      <div class="col-md-4 col-sm-6"><img src="{{ asset('assets/taekwondo5.jpg') }}" alt=""></div>
+      <div class="col-md-4 col-sm-6"><img src="{{ asset('assets/taekwondo2.jpg') }}" alt=""></div>
+      <div class="col-md-4 col-sm-6"><img src="{{ asset('assets/taekwondo3.jpg') }}" alt=""></div>
+      <div class="col-md-4 col-sm-6"><img src="{{ asset('assets/taekwondo4.jpg') }}" alt=""></div>
+      <div class="col-md-4 col-sm-6"><img src="{{ asset('assets/kesang.jpg') }}" alt=""></div>
+      <div class="col-md-4 col-sm-6"><img src="{{ asset('assets/taekwondo.jpg') }}" alt=""></div>
     </div>
   </section>
 

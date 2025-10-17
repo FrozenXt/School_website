@@ -8,53 +8,97 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
   <style>
-    /* General */
     body {
       font-family: 'Poppins', sans-serif;
       background-color: #ffffff;
       color: #333;
       overflow-x: hidden;
     }
-    /* Stylish Frame for School Image */
-.image-frame {
-  display: inline-block;
-  padding: 12px;
-  background: linear-gradient(135deg, #198754, #32a875);
-  border-radius: 18px;
-  box-shadow: 0 8px 20px rgba(25, 135, 84, 0.3);
-  position: relative;
-  overflow: hidden;
-  transition: 0.4s ease;
-}
 
-.image-frame::before {
-  content: "";
-  position: absolute;
-  top: 6px;
-  left: 6px;
-  right: 6px;
-  bottom: 6px;
-  border: 3px solid white;
-  border-radius: 12px;
-  pointer-events: none;
-  transition: 0.3s;
-}
+    /* ====================== HERO SLIDESHOW ====================== */
+    .hero-about {
+      position: relative;
+      height: 70vh;
+      overflow: hidden;
+      font-family: 'Poppins', sans-serif;
+    }
 
-.image-frame:hover {
-  transform: scale(1.03) rotate(-1deg);
-  box-shadow: 0 12px 30px rgba(25, 135, 84, 0.4);
-}
+    .hero-slides {
+      position: relative;
+      height: 100%;
+      width: 100%;
+    }
 
-.image-frame img {
-  border-radius: 10px;
-  transition: 0.3s;
-}
+    .hero-slide {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      opacity: 0;
+      transition: opacity 1.2s ease-in-out, transform 5s ease-in-out;
+      transform: scale(1.1);
+    }
 
-.image-frame:hover img {
-  transform: scale(1.02);
-}
+    .hero-slide.active {
+      opacity: 1;
+      transform: scale(1);
+      z-index: 1;
+    }
 
+    .hero-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      text-align: center;
+      z-index: 5;
+      animation: fadeIn 1.5s ease-in-out;
+    }
 
+    .hero-content h1 {
+      font-size: 3.5rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    .hero-content p {
+      font-size: 1.1rem;
+      opacity: 0.9;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .hero-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(25, 135, 84, 0.7);
+      border: none;
+      color: white;
+      font-size: 1.4rem;
+      padding: 10px 14px;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: background 0.3s;
+      z-index: 10;
+    }
+    .hero-btn:hover {
+      background: rgba(25, 135, 84, 1);
+    }
+    .hero-btn.prev { left: 25px; }
+    .hero-btn.next { right: 25px; }
+
+    @media (max-width: 768px) {
+      .hero-content h1 { font-size: 2rem; }
+    }
+
+    /* ====================== ABOUT PAGE ====================== */
     .section-title {
       font-weight: 700;
       color: #198754;
@@ -64,6 +108,7 @@
       position: relative;
       display: inline-block;
     }
+
     .section-title::after {
       content: "";
       display: block;
@@ -74,31 +119,35 @@
       border-radius: 2px;
     }
 
-    /* Hero Section */
-    .hero-about {
-      background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
-                  url('assets/team.jpg') no-repeat center center/cover;
-      height: 70vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: white;
-      animation: fadeIn 1.5s ease-in-out;
+    .image-frame {
+      display: inline-block;
+      padding: 12px;
+      background: linear-gradient(135deg, #198754, #32a875);
+      border-radius: 18px;
+      box-shadow: 0 8px 20px rgba(25, 135, 84, 0.3);
+      position: relative;
+      overflow: hidden;
+      transition: 0.4s ease;
     }
 
-    .hero-content h1 {
-      font-size: 3.5rem;
-      font-weight: 700;
-      letter-spacing: 1px;
+    .image-frame::before {
+      content: "";
+      position: absolute;
+      top: 6px;
+      left: 6px;
+      right: 6px;
+      bottom: 6px;
+      border: 3px solid white;
+      border-radius: 12px;
+      pointer-events: none;
+      transition: 0.3s;
     }
 
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
+    .image-frame:hover {
+      transform: scale(1.03) rotate(-1deg);
+      box-shadow: 0 12px 30px rgba(25, 135, 84, 0.4);
     }
 
-    /* Icon Boxes */
     .icon-box {
       background: #f8f9fa;
       border-radius: 12px;
@@ -117,7 +166,6 @@
       box-shadow: 0 6px 20px rgba(25,135,84,0.3);
     }
 
-    /* Principal Message */
     .principal-box {
       background: linear-gradient(135deg, #f8f9fa, #e9f7ef);
       padding: 30px;
@@ -132,7 +180,6 @@
       box-shadow: 0 6px 15px rgba(25,135,84,0.2);
     }
 
-    /* Team Section */
     .team-card {
       border: none;
       border-radius: 15px;
@@ -152,17 +199,9 @@
       object-fit: cover;
     }
 
-    .team-info {
-      padding: 20px;
-    }
+    .team-info { padding: 20px; }
+    .team-info h5 { color: #198754; font-weight: 600; margin-bottom: 5px; }
 
-    .team-info h5 {
-      color: #198754;
-      font-weight: 600;
-      margin-bottom: 5px;
-    }
-
-    /* Map */
     .map-container {
       height: 400px;
       border-radius: 12px;
@@ -170,19 +209,13 @@
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
 
-    /* Footer */
     .footer {
       background: #198754;
       color: white;
       padding: 30px 0;
     }
+    .footer p { margin: 0; opacity: 0.9; }
 
-    .footer p {
-      margin: 0;
-      opacity: 0.9;
-    }
-
-    /* Smooth Reveal Animations */
     [data-reveal] {
       opacity: 0;
       transform: translateY(30px);
@@ -198,15 +231,24 @@
 
   @include('partials.navbar')
 
-  <!-- Hero -->
-  <section class="hero-about">
-    <div class="hero-content">
-      <h1>About Ambassador Academy</h1>
-      <p class="lead">Located at Jorpati, Kathmandu, Nepal</p>
+  <!-- ====================== HERO SECTION ====================== -->
+  <section class="hero-about position-relative">
+    <div class="hero-slides">
+      <div class="hero-slide active" style="background-image: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('assets/team.jpg');"></div>
+      <div class="hero-slide" style="background-image: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('assets/school1.jpg');"></div>
+      <div class="hero-slide" style="background-image: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('assets/assembly.jpg');"></div>
     </div>
+
+    <div class="hero-content text-center">
+      <h1>About Ambassador Academy</h1>
+      <p>Located at Jorpati, Kathmandu, Nepal</p>
+    </div>
+
+    <button class="hero-btn prev"><i class="fas fa-chevron-left"></i></button>
+    <button class="hero-btn next"><i class="fas fa-chevron-right"></i></button>
   </section>
 
-  <!-- Who We Are -->
+  <!-- ====================== WHO WE ARE ====================== -->
   <section class="container my-5 text-center" data-reveal>
     <h2 class="section-title">Who We Are</h2>
     <p class="fs-5">
@@ -216,32 +258,30 @@
     </p>
   </section>
 
-  <!-- Journey -->
-  <!-- School History / Our Journey -->
-<section class="container my-5" data-reveal>
-  <div class="row align-items-center">
-    <div class="col-md-6 mb-4 mb-md-0 text-center">
-      <div class="image-frame">
-        <img src="assets/school1.jpg" alt="School Building" class="img-fluid rounded shadow">
+  <!-- ====================== OUR JOURNEY ====================== -->
+  <section class="container my-5" data-reveal>
+    <div class="row align-items-center">
+      <div class="col-md-6 mb-4 mb-md-0 text-center">
+        <div class="image-frame">
+          <img src="assets/building1.jpg" alt="School Building" class="img-fluid rounded shadow">
+        </div>
+      </div>
+      <div class="col-md-6">
+        <h2 class="section-title">Our Journey</h2>
+        <p>
+          Founded in <strong>2005</strong>, Ambassador Academy began as a humble vision to redefine education in Nepal. 
+          Over time, it has grown into one of the region’s most trusted institutions — known for its academic excellence, 
+          character development, and student-centered approach.
+        </p>
+        <p>
+          Today, we proudly serve hundreds of students and continue to foster a culture of innovation, 
+          inclusivity, and lifelong learning.
+        </p>
       </div>
     </div>
-    <div class="col-md-6">
-      <h2 class="section-title">Our Journey</h2>
-      <p>
-        Founded in <strong>2005</strong>, Ambassador Academy began as a humble vision to redefine education in Nepal. 
-        Over time, it has grown into one of the region’s most trusted institutions — known for its academic excellence, 
-        character development, and student-centered approach.
-      </p>
-      <p>
-        Today, we proudly serve hundreds of students and continue to foster a culture of innovation, 
-        inclusivity, and lifelong learning.
-      </p>
-    </div>
-  </div>
-</section>
+  </section>
 
-
-  <!-- Mission / Vision / Values -->
+  <!-- ====================== MISSION / VISION ====================== -->
   <section class="container my-5 text-center" data-reveal>
     <h2 class="section-title">Our Mission, Vision & Core Values</h2>
     <div class="row g-4">
@@ -251,7 +291,7 @@
     </div>
   </section>
 
-  <!-- Team -->
+  <!-- ====================== TEAM ====================== -->
   <section class="container my-5 text-center" data-reveal>
     <h2 class="section-title">Meet Our Team</h2>
     <div class="row g-4">
@@ -262,7 +302,7 @@
     </div>
   </section>
 
-  <!-- Principal Message -->
+  <!-- ====================== PRINCIPAL MESSAGE ====================== -->
   <section class="container my-5" data-reveal>
     <h2 class="section-title text-center">Principal’s Message</h2>
     <div class="principal-box">
@@ -272,7 +312,7 @@
     </div>
   </section>
 
-  <!-- Map -->
+  <!-- ====================== MAP ====================== -->
   <section class="container my-5 text-center" data-reveal>
     <h2 class="section-title">Where We Are</h2>
     <p>We are proudly located in Jorpati, Kathmandu, Nepal</p>
@@ -284,13 +324,14 @@
     </div>
   </section>
 
-  <!-- Footer -->
+  <!-- ====================== FOOTER ====================== -->
   <footer class="footer text-center">
     <p>&copy; 2025 Ambassador Academy | All Rights Reserved</p>
     <p>Email: info@ambassadoracademy.com | Phone: +977 01-1234567</p>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
   <script>
     // Reveal Animation
     const revealEls = document.querySelectorAll('[data-reveal]');
@@ -300,6 +341,37 @@
         if (rect < window.innerHeight - 100) el.classList.add('visible');
       });
     });
+
+    // Hero slideshow
+    document.addEventListener("DOMContentLoaded", function() {
+      const slides = document.querySelectorAll('.hero-slide');
+      let currentSlide = 0;
+      const nextBtn = document.querySelector('.hero-btn.next');
+      const prevBtn = document.querySelector('.hero-btn.prev');
+
+      function showSlide(index) {
+        slides.forEach((slide, i) => {
+          slide.classList.toggle('active', i === index);
+        });
+      }
+
+      nextBtn.addEventListener('click', () => {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+      });
+
+      prevBtn.addEventListener('click', () => {
+        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+        showSlide(currentSlide);
+      });
+
+      // Auto slide every 4 seconds
+      setInterval(() => {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+      }, 4000);
+    });
   </script>
+
 </body>
 </html>

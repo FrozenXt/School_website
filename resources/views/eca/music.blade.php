@@ -194,7 +194,7 @@
     <h2 class="section-title">About Our Music Club</h2>
     <div class="row align-items-center g-4">
       <div class="col-md-6">
-        <img src="{{ asset('assets/eca/music-about.jpg') }}" alt="Music Performance">
+        <img src="{{ asset('assets/music.jpg') }}" alt="Music Performance">
       </div>
       <div class="col-md-6">
         <p>
@@ -214,21 +214,21 @@
     <div class="row g-4 justify-content-center">
       <div class="col-md-4">
         <div class="event-card">
-          <img src="{{ asset('assets/eca/music-event1.jpg') }}" alt="Annual Concert">
+          <img src="{{ asset('assets/music1.jpg') }}" alt="Annual Concert">
           <h5>Annual Concert</h5>
           <p>Students showcase their talent in a grand musical evening filled with harmony and creativity.</p>
         </div>
       </div>
       <div class="col-md-4">
         <div class="event-card">
-          <img src="{{ asset('assets/eca/music-event2.jpg') }}" alt="Instrument Workshop">
+          <img src="{{ asset('assets/music5.jpg') }}" alt="Instrument Workshop">
           <h5>Instrument Workshop</h5>
           <p>Hands-on learning with guitars, keyboards, drums, and more under expert guidance.</p>
         </div>
       </div>
       <div class="col-md-4">
         <div class="event-card">
-          <img src="{{ asset('assets/eca/music-event3.jpg') }}" alt="Choir Day">
+          <img src="{{ asset('assets/choir.jpg') }}" alt="Choir Day">
           <h5>Choir Day</h5>
           <p>Celebrating unity through group performances and soulful harmonies.</p>
         </div>
@@ -246,12 +246,12 @@
   <section class="container my-5">
     <h2 class="section-title">Music Gallery</h2>
     <div class="row g-3 music-gallery">
-      <div class="col-md-4 col-sm-6"><img src="{{ asset('assets/eca/m1.jpg') }}" alt=""></div>
-      <div class="col-md-4 col-sm-6"><img src="{{ asset('assets/eca/m2.jpg') }}" alt=""></div>
-      <div class="col-md-4 col-sm-6"><img src="{{ asset('assets/eca/m3.jpg') }}" alt=""></div>
-      <div class="col-md-4 col-sm-6"><img src="{{ asset('assets/eca/m4.jpg') }}" alt=""></div>
-      <div class="col-md-4 col-sm-6"><img src="{{ asset('assets/eca/m5.jpg') }}" alt=""></div>
-      <div class="col-md-4 col-sm-6"><img src="{{ asset('assets/eca/m6.jpg') }}" alt=""></div>
+      <div class="col-md-4 col-sm-6"><img src="{{ asset('assets/music4.jpg') }}" alt=""></div>
+      <div class="col-md-4 col-sm-6"><img src="{{ asset('assets/paino.jpg') }}" alt=""></div>
+      <div class="col-md-4 col-sm-6"><img src="{{ asset('assets/sing.jpg') }}" alt=""></div>
+      <div class="col-md-4 col-sm-6"><img src="{{ asset('assets/music3.jpg') }}" alt=""></div>
+      <div class="col-md-4 col-sm-6"><img src="{{ asset('assets/group.jpg') }}" alt=""></div>
+      <div class="col-md-4 col-sm-6"><img src="{{ asset('assets/guitar.jpg') }}" alt=""></div>
     </div>
   </section>
 
