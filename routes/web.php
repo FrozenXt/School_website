@@ -76,9 +76,6 @@ Route::get('/eca/music', function()
 })->name('eca.music');
 
 
-
-
-
 Route::get('/admin/logout', [AdminController::class, 'logout'])->name('admin.logout');
 
 
