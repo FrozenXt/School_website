@@ -269,7 +269,7 @@
       <div class="col-md-6">
         <h2 class="section-title">Our Journey</h2>
         <p>
-          Founded in <strong>2005</strong>, Ambassador Academy began as a humble vision to redefine education in Nepal. 
+          Founded in <strong>2007</strong>, Ambassador Academy began as a humble vision to redefine education in Nepal. 
           Over time, it has grown into one of the region’s most trusted institutions — known for its academic excellence, 
           character development, and student-centered approach.
         </p>
