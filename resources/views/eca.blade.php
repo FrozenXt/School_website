@@ -414,6 +414,7 @@
   <footer class="footer text-center">
     <div class="container">
       <p>&copy; 2025 Ambassador Academy | All Rights Reserved</p>
+      <p class="developer">Developed by <strong>Sujal Lamichhane</strong></p>
       <div>
         <a href="#"><i class="bi bi-facebook fs-4"></i></a>
         <a href="#"><i class="bi bi-instagram fs-4"></i></a>
