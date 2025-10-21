@@ -298,7 +298,7 @@
         <i class="fab fa-tiktok"></i>
         <i class="fab fa-twitter"></i>
       </p>
-      <p>Email: info@ambassadoracademy.com | Phone: +977 9841223044</p>
+      <p>Email: ambassadoracademy111@gmail.com | Phone: +977 9841223044</p>
     </div>
   </footer>
 

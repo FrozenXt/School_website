@@ -113,7 +113,7 @@
           <h3 class="fw-bold mb-4 text-success">Contact Information</h3>
           <div class="contact-info mb-3">
             <i class="fas fa-map-marker-alt"></i> 
-            <span>Jorpati, Kathmandu, Nepal</span>
+            <span>Jorpati, opposite of lama petrol pump, Kathmandu, Nepal</span>
           </div>
           <div class="contact-info mb-3">
             <i class="fas fa-phone"></i> 
@@ -121,7 +121,7 @@
           </div>
           <div class="contact-info mb-3">
             <i class="fas fa-envelope"></i> 
-            <span>info@ambassadoracademy.com</span>
+            <span>ambassadoracademy111@gmail.com</span>
           </div>
 
           <hr>
